@@ -8,18 +8,15 @@ function solveEquation(a, b, c) {
   //  find Discriminant b²-4*a*c
   let valueDiscriminant = b ** 2 - 4 * a * c;
 
-  if (valueDiscriminant < 0) {
-  // пустой массив
-  } else if (valueDiscriminant === 0) {
+  if (valueDiscriminant === 0) {
     firstRoot = -b / ( 2 * a );
     arr.push(firstRoot);
-  } else {
+  } else if (valueDiscriminant > 0) {
     firstRoot = (-b + Math.sqrt(valueDiscriminant) )/(2*a);
     secondRoot = (-b - Math.sqrt(valueDiscriminant) )/(2*a);
     arr.push(firstRoot);
     arr.push(secondRoot);
   }
-
 
   return arr;
 }
